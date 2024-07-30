@@ -1,0 +1,173 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navbar ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    color: #ff6347;
+}
+
+.navbar ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Align with bottom of the li */
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    z-index: 1000;
+    border-top: 1px solid #e0e0e0; /* Optional: Adds a border at the top of the dropdown */
+    width: 100%; /* Adjust width if needed */
+}
+
+.navbar ul li .dropdown-menu li {
+    display: block;
+}
+
+.navbar ul li .dropdown-menu li a {
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    text-align: left; /* Align text to the left */
+}
+
+.navbar ul li .dropdown-menu li a:hover {
+    background-color: #f4f4f4;
+    color: #ff6347;
+}
+
+.navbar ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.header h1 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.header p {
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+.pricing {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-around; /* Distribute cards evenly */
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+    width: 30%; /* Fixed width to ensure they are side by side */
+    min-width: 250px; /* Ensure cards don't get too narrow */
+    box-sizing: border-box;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card .price {
+    font-size: 2rem;
+    color: #ff6347;
+    margin-bottom: 1rem;
+}
+
+.card .price span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.card button {
+    background-color: #ff6347;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #e5533d;
+}
+
+.footer {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer p {
+    margin: 0;
+    color: #666;
+}
+
