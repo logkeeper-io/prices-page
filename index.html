@@ -99,11 +99,20 @@
             <div class="card">
                 <h2>Pro Tier</h2>
                 <p class="price">$250<span>/mo</span></p>
+                    <div class="retention-selector">
+                        <label for="retention-dropdown">Select number of retention days:</label>
+                        <select id="retention-dropdown">
+                            <option value="3">3</option>
+                            <option value="7">7</option>
+                            <option value="14">14</option>
+                            <option value="30">30</option>
+                        </select>
+                    </div>
                 <ul>
                     <li>50Gb free per month</li>
                     <li>Up to 100Gb ingested per day</li>
-                    <li>$0.75 per 1Gb ingested</li>
-                    <li>14day logs retention</li>
+                    <li><span id="rotation-count-days">5</span> days logs retention</li>
+                    <li id="pro-price">$19/per Gb ingested</li>
                     <li>Unlimited Users</li>
                     <li>$2 per User</li>
                     <li>Basic Authentication</li>
@@ -153,6 +162,7 @@
             <p>&copy; 2024 Your Company. All rights reserved.</p>
         </div>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
 

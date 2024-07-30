@@ -159,6 +159,14 @@ body {
     background-color: #e5533d;
 }
 
+.user-selector {
+    margin-top: 1rem;
+}
+
+.user-selector label {
+    margin-right: 0.5rem;
+}
+
 .footer {
     background-color: #ffffff;
     padding: 1rem 0;
@@ -170,4 +178,3 @@ body {
     margin: 0;
     color: #666;
 }
-
