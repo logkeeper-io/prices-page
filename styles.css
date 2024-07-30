@@ -68,7 +68,9 @@ body {
     list-style-type: none;
     z-index: 1000;
     border-top: 1px solid #e0e0e0; /* Optional: Adds a border at the top of the dropdown */
-    width: 100%; /* Adjust width if needed */
+   /*width: 100%; Adjust width if needed */
+    width: 200%;
+    min-width: 500px;
 }
 
 .navbar ul li .dropdown-menu li {
