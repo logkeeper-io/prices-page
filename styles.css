@@ -116,6 +116,24 @@ body {
     width: 30%; /* Fixed width to ensure they are side by side */
     min-width: 250px; /* Ensure cards don't get too narrow */
     box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Ensure the selected card is on top */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.card.selected {
+    background-color: #ffffff; /* White background for selected card */
+    color: #333; /* Darker text color for contrast */
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ff6347; /* Optional: Add border to highlight the selected card */
+}
+
+.card:not(.selected) {
+    background-color: #f0f0f0;
+    color: #999;
+    opacity: 0.8;
+    transform: scale(0.95);
 }
 
 .card h2 {
@@ -159,11 +177,11 @@ body {
     background-color: #e5533d;
 }
 
-.user-selector {
+.retention-selector {
     margin-top: 1rem;
 }
 
-.user-selector label {
+.retention-selector label {
     margin-right: 0.5rem;
 }
 
