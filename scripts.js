@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const users = parseInt(usersDropdown.value, 10);
 
         const logPrice = priceMap[retentionDays] || 0.4; // Default price
-        const totalCost = (logAmount * logPrice * 30) + 250 + (users * 2);
+        const totalCost = (logAmount * logPrice * 30) + 250 + (users * 1.2);
         totalCostElement.textContent = totalCost.toFixed(2);
     }
 
