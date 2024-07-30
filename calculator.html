@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pricing Plans</title>
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <ul>
+            <li class="dropdown">
+                <a href="index.html">Home</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Suboption 1</a></li>
+                    <li><a href="#">Suboption 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Documentation</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Suboption 1</a></li>
+                    <li><a href="#">Suboption 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Prices</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Suboption 1</a></li>
+                    <li><a href="#">Suboption 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Platform</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Suboption 1</a></li>
+                    <li><a href="#">Suboption 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">About</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Suboption 1</a></li>
+                    <li><a href="#">Suboption 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Resources</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Suboption 1</a></li>
+                    <li><a href="#">Suboption 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <h1>Our Pricing Plans</h1>
+        <p>Select the plan that best fits your requirements</p>
+        <a href="calculator.html">Use calculator for price estimation.</a>
+    </div>
+
+    <div class="pricing">
+        <div class="card selected">
+            <h2>Calculate Your Costs</h2>
+            <form id="calculator-form">
+                <div class="form-group">
+                    <label for="log-amount-slider">Amount of Logs (in GB) per Day:</label>
+                    <input type="range" id="log-amount-slider" min="1" max="100" step="1" value="1">
+                    <input type="number" id="log-amount-value" min="1" max="100" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="retention-dropdown">Select Retention Days:</label>
+                    <select id="retention-dropdown">
+                        <option value="3">3 days</option>
+                        <option value="7">7 days</option>
+                        <option value="14">14 days</option>
+                        <option value="30">30 days</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="users-dropdown">Number of Users:</label>
+                    <select id="users-dropdown">
+                        <!-- Options from 1 to 500 -->
+                        <option value="10">10</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="150">150</option>
+                        <option value="200">200</option>
+                        <!-- Add more options up to 500 -->
+                        <option value="500">500</option>
+                    </select>
+                </div>
+                <div class="result">
+                    <p>Total Cost: $<span id="total-cost">0.00</span></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 LogKeeper. All rights reserved.</p>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
+
+

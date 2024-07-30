@@ -9,12 +9,14 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 100%; /* Full width */
     margin: 0 auto;
+    padding: 0 2rem; /* Add padding to ensure content doesn't touch screen edges */
+    box-sizing: border-box;
 }
 
 .header {
-    background-color: #ffffff;
+    background-color: #f5f6f8; /*#f0f4f8; e0e4e8*/
     padding: 2rem 0;
     text-align: center;
     border-bottom: 1px solid #e0e0e0;
@@ -116,6 +118,55 @@ body {
     width: 30%; /* Fixed width to ensure they are side by side */
     min-width: 250px; /* Ensure cards don't get too narrow */
     box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Ensure the selected card is on top */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.calculator {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+    width: 60%; /* Fixed width to ensure they are side by side */
+    min-width: 500px; /* Ensure cards don't get too narrow */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Ensure the selected card is on top */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.card.selected {
+    background-color: #ffffff; /* White background for selected card */
+    color: #333; /* Darker text color for contrast */
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ff6347; /* Optional: Add border to highlight the selected card */
+}
+
+.card:not(.selected) {
+    background-color: #f0f0f0;
+    color: #999;
+    opacity: 0.8;
+    transform: scale(0.95);
+}
+
+calculator.selected {
+    background-color: #ffffff; /* White background for selected card */
+    color: #333; /* Darker text color for contrast */
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ff6347; /* Optional: Add border to highlight the selected card */
+    width: 200%; /* Fixed width to ensure they are side by side */
+    min-width: 1200px; /* Ensure cards don't get too narrow */
+}
+
+.calculator:not(.selected) {
+    background-color: #f0f0f0;
+    color: #999;
+    opacity: 0.8;
+    transform: scale(0.95);
 }
 
 .card h2 {
@@ -159,6 +210,14 @@ body {
     background-color: #e5533d;
 }
 
+.retention-selector {
+    margin-top: 1rem;
+}
+
+.retention-selector label {
+    margin-right: 0.5rem;
+}
+
 .footer {
     background-color: #ffffff;
     padding: 1rem 0;
@@ -171,3 +230,11 @@ body {
     color: #666;
 }
 
+.form-group {
+    margin-bottom: 20px;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
