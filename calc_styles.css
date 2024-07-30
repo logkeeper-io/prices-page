@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navbar ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    color: #ff6347;
+}
+
+.navbar ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    z-index: 1000;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+}
+
+.navbar ul li .dropdown-menu li {
+    display: block;
+}
+
+.navbar ul li .dropdown-menu li a {
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navbar ul li .dropdown-menu li a:hover {
+    background-color: #f4f4f4;
+    color: #ff6347;
+}
+
+.navbar ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.header h1 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.header p {
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+.calculator {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center; /* Center the calculator card */
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%; /* Full width of its container */
+    max-width: 600px; /* Maximum width for better readability */
+    margin: 0 auto; /* Center the card */
+    box-sizing: border-box;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card .form-group {
+    margin-bottom: 1rem;
+}
+
+.card label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.card input[type="range"],
+.card input[type="number"],
+.card select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.card .result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.card button {
+    background-color: #ff6347;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #e5533d;
+}
+
+.footer {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer p {
+    margin: 0;
+    color: #666;
+}
