@@ -62,6 +62,7 @@ body {
     background-color: #ffffff;
     padding: 1rem 0;
     border-bottom: 1px solid #e0e0e0;
+    position: relative; /* Allows positioning of the buttons */
 }
 
 .navbar ul {
@@ -403,6 +404,23 @@ integration-logos-wrapper {
     }
 }
 
+@media (max-width: 768px) {
+    .featuredoc {
+        grid-template-columns: 1fr; /* Switch to a single column on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-buttons {
+        margin-top: 1rem;
+    }
+}
+
 
 /* DOCS*/
 .featuredoc {
@@ -413,11 +431,7 @@ integration-logos-wrapper {
     padding: 2rem;
 }
 
-@media (max-width: 768px) {
-    .featuredoc {
-        grid-template-columns: 1fr; /* Switch to a single column on smaller screens */
-    }
-}
+
 
 .box {
     display: flex;
@@ -460,4 +474,37 @@ integration-logos-wrapper {
     margin: 0.5rem 0 0;
     color: #666;
     font-size: 0.9rem;
+}
+
+
+/* Buttons Container */
+.navbar-buttons {
+    position: absolute;
+    right: 2rem; /* Position the buttons on the right side */
+    top: 0; /* Align to the top of the navbar */
+    height: 100%; /* Make buttons take full height of the navbar */
+    display: flex;
+    align-items: center; /* Vertically center the buttons */
+    gap: 1rem; /* Space between buttons */
+}
+
+/* Button Styles */
+.navbar-buttons button {
+    width: 120px; /* Set a fixed width for the buttons */
+    height: 40px; /* Ensure consistent height */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    background-color: #ffffff; /* Dark blue background */
+    color: #011e3b; /* White text */
+    border: 2px solid #011e3b;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.navbar-buttons button:hover {
+    background-color: #011e3b; /* Slightly lighter blue on hover */
+    color: #ffffff;
+    border: 2px solid #ffffff;
 }
