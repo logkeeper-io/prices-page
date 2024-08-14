@@ -114,3 +114,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to handle submenu toggle
+    function toggleSubmenu(event) {
+        event.stopPropagation();
+        const submenu = this.querySelector('.submenu');
+        if (submenu) {
+            submenu.classList.toggle('active');
+            this.classList.toggle('active');
+        }
+    }
+
+    // Add click event listeners to menu items with submenus
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', toggleSubmenu);
+    });
+
+    // Optionally, close other submenus when one is opened
+    document.addEventListener('click', function() {
+        document.querySelectorAll('.submenu.active').forEach(submenu => {
+            submenu.classList.remove('active');
+            submenu.parentElement.classList.remove('active');
+        });
+    });
+});
