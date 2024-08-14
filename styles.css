@@ -309,24 +309,38 @@ body {
     color: #ffffff; /* White text for dark background */
 }
 
+integration-logos-wrapper {
+    width: 100%;
+    overflow: hidden; /* Hide overflow to create the moving effect */
+    position: relative;
+}
+
 .integration-logos {
     display: flex;
-    flex-wrap: wrap; /* Allow logos to wrap to the next line */
-    justify-content: center; /* Center-align logos horizontally */
-    gap: 1rem; /* Space between logos */
-    margin-top: 2rem; /* Space above the logo grid */
+    justify-content: space-between;
+    animation: moveLogos 120s linear infinite; /* Animate the logos */
 }
 
 .integration-logo {
-    flex: 1 1 150px; /* Flexible width with a minimum of 150px */
-    max-width: 150px; /* Limit maximum width of each logo */
+    flex: 0 0 auto;
+    width: 150px; /* Fixed width for each logo */
     height: auto; /* Maintain aspect ratio */
+    padding: 10px;
 }
 
 .integration-logo img {
-    width: 100%; /* Make logo images responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
     object-fit: contain; /* Fit image within the container */
+}
+
+@keyframes moveLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .feature h2 {
