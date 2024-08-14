@@ -103,3 +103,14 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCost();
 });
 
+// Example JavaScript to toggle selected state
+document.addEventListener('DOMContentLoaded', function() {
+    const pricingButton = document.getElementById('pricing-button');
+
+    pricingButton.addEventListener('click', function() {
+        // Toggle the 'selected' class on click
+        this.classList.toggle('selected');
+    });
+});
+
+

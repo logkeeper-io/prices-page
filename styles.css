@@ -1,31 +1,67 @@
-/* styles.css */
-
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
+/* General Reset */
+body, html {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333;
     background-color: #f8f8f8;
 }
 
+/* Full-Width Container */
 .container {
-    width: 100%; /* Full width */
-    margin: 0 auto;
-    padding: 0 2rem; /* Add padding to ensure content doesn't touch screen edges */
-    box-sizing: border-box;
-}
-
-.header {
-    background-color: #f5f6f8; /*#f0f4f8; e0e4e8*/
-    padding: 2rem 0;
-    text-align: center;
+    width: 100%;
+    background-color: #ffffff; /* Ensure background matches the rest of the content */
     border-bottom: 1px solid #e0e0e0;
+    position: fixed; /* Fix container to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
 }
 
+/* Container inner for centering content */
+.container-inner {
+    max-width: 1200px; /* Optional: Set max width for large screens */
+    margin: 0 auto;
+    padding: 0 2rem; /* Add padding for better spacing */
+    box-sizing: border-box;
+    text-align: center; /* Center-align text within container */
+}
+
+/* Adjust body padding to prevent overlap */
+body {
+    padding-top: 6rem; /* Adjust based on container height */
+}
+
+/* Header Styling */
+.header {
+    background-color: #f5f6f8;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center; /* Center-align text horizontally */
+    position: relative; /* Ensure the positioning context for centering */
+    width: 100%; /* Full width of the viewport */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.header p {
+    margin: 0.5rem 0 0;
+    color: #666;
+
+}
+
+/* Navbar Styling */
 .navbar {
     background-color: #ffffff;
     padding: 1rem 0;
-    text-align: center;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -40,7 +76,6 @@ body {
 
 .navbar ul li {
     position: relative;
-    display: inline-block;
 }
 
 .navbar ul li a {
@@ -59,22 +94,16 @@ body {
 .navbar ul li .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%; /* Align with bottom of the li */
+    top: 100%;
     left: 0;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0;
     margin: 0;
     list-style-type: none;
-    z-index: 1000;
-    border-top: 1px solid #e0e0e0; /* Optional: Adds a border at the top of the dropdown */
-   /*width: 100%; Adjust width if needed */
     width: 200%;
     min-width: 500px;
-}
-
-.navbar ul li .dropdown-menu li {
-    display: block;
+    border-top: 1px solid #e0e0e0;
 }
 
 .navbar ul li .dropdown-menu li a {
@@ -82,7 +111,6 @@ body {
     color: #333;
     text-decoration: none;
     display: block;
-    text-align: left; /* Align text to the left */
 }
 
 .navbar ul li .dropdown-menu li a:hover {
@@ -94,124 +122,104 @@ body {
     display: block;
 }
 
-.header h1 {
-    margin: 1rem 0 0.5rem 0;
-    font-size: 2.5rem;
-    color: #333;
+/* Content Alignment */
+.main-content {
+    width: 100%; /* Full width of the viewport */
+    padding: 2rem 0; /* Vertical padding for spacing */
+    max-width: 1200px; /* Set a maximum width for large screens */
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center; /* Center-align text horizontally */
+    box-sizing: border-box; /* Incl/* Include padding in width cal */
 }
 
-.header p {
-    margin-top: 0.5rem;
-    color: #666;
+.main-content-plans {
+    width: 100%; /* Full width of the viewport */
+    padding: 2rem 0; /* Vertical padding for spacing */
+    max-width: 1400px; /* Set a maximum width for large screens */
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center; /* Center-align text horizontally */
+    box-sizing: border-box; /* Incl/* Include padding in width cal */
 }
 
+
+
+/* Pricing and Card Styling */
 .pricing {
     padding: 4rem 0;
     display: flex;
-    justify-content: space-around; /* Distribute cards evenly */
+    justify-content: center; /* Center-align cards */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    gap: 2rem;
 }
 
-.card {
+.card, .calculator {
     background-color: #ffffff;
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 15px; /* More rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Align text to the left */
-    width: 30%; /* Fixed width to ensure they are side by side */
-    min-width: 250px; /* Ensure cards don't get too narrow */
+    text-align: center; /* Center-align text in cards */
+    width: 100%;
+    max-width: 300px; /* Adjust max width as needed */
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1; /* Ensure the selected card is on top */
-    cursor: pointer; /* Show pointer cursor on hover */
+    cursor: pointer;
 }
 
-.calculator {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Align text to the left */
-    width: 60%; /* Fixed width to ensure they are side by side */
-    min-width: 500px; /* Ensure cards don't get too narrow */
-    box-sizing: border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1; /* Ensure the selected card is on top */
-    cursor: pointer; /* Show pointer cursor on hover */
-}
-
-.card.selected {
-    background-color: #ffffff; /* White background for selected card */
-    color: #333; /* Darker text color for contrast */
+.card.selected, .calculator.selected {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    border: 2px solid #ff6347; /* Optional: Add border to highlight the selected card */
+    border: 2px solid #000000;
 }
 
-.card:not(.selected) {
+.card:not(.selected), .calculator:not(.selected) {
     background-color: #f0f0f0;
     color: #999;
     opacity: 0.8;
     transform: scale(0.95);
 }
 
-calculator.selected {
-    background-color: #ffffff; /* White background for selected card */
-    color: #333; /* Darker text color for contrast */
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    border: 2px solid #ff6347; /* Optional: Add border to highlight the selected card */
-    width: 200%; /* Fixed width to ensure they are side by side */
-    min-width: 1200px; /* Ensure cards don't get too narrow */
-}
-
-.calculator:not(.selected) {
-    background-color: #f0f0f0;
-    color: #999;
-    opacity: 0.8;
-    transform: scale(0.95);
-}
-
-.card h2 {
+.card h2, .calculator h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.card .price {
+.card .price, .calculator .price {
     font-size: 2rem;
-    color: #ff6347;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
-.card .price span {
+.card .price span, .calculator .price span {
     font-size: 1rem;
     color: #666;
 }
 
-.card ul {
+.card ul, .calculator ul {
     list-style-type: none;
     padding: 0;
     margin: 1rem 0;
 }
 
-.card ul li {
+.card ul li, .calculator ul li {
     margin-bottom: 0.5rem;
     color: #666;
 }
 
-.card button {
-    background-color: #ff6347;
+.card button, .calculator button {
+    background-color: #000000;
     color: #ffffff;
     padding: 0.5rem 1rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 15px; /* More rounded corners */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.card button:hover {
-    background-color: #e5533d;
+.card button:hover, .calculator button:hover {
+    background-color: #000000;
 }
 
+/* Retention Selector */
 .retention-selector {
     margin-top: 1rem;
 }
@@ -220,18 +228,62 @@ calculator.selected {
     margin-right: 0.5rem;
 }
 
+/* Feature Image */
+.feature-image {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Feature Buttons */
+.feature-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-buttons .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: #000000; /* Black text */
+    background-color: #fff; /* White background */
+    border: 2px solid #000000; /* Black border */
+    text-decoration: none;
+    border-radius: 15px; /* More rounded corners */
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.feature-buttons .button:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #fff; /* White text on hover */
+}
+
+.feature-buttons .button.selected {
+    background-color: #000000; /* Black background for selected button */
+    color: #fff; /* White text for selected button */
+    border: 2px solid #000000; /* Black border for selected button */
+}
+
+/* Footer Styling */
 .footer {
+    width: 100%;
     background-color: #ffffff;
     padding: 1rem 0;
     text-align: center;
     border-top: 1px solid #e0e0e0;
+    position: relative; /* Ensure it stays below the content */
+    margin-top: auto; /* Push footer to the bottom if needed */
 }
+
 
 .footer p {
     margin: 0;
     color: #666;
 }
 
+/* Form and Result Styling */
 .form-group {
     margin-bottom: 20px;
 }
@@ -239,4 +291,68 @@ calculator.selected {
 .result {
     margin-top: 20px;
     font-size: 1.2em;
+}
+
+.feature {
+    text-align: center; /* Center-align text in feature section */
+    padding: 2rem 0;
+}
+
+.feature h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.feature p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 128px); /* 5 columns by default, each 128px wide */
+    gap: 1rem; /* Space between logos */
+    justify-content: center; /* Center grid within container */
+    margin: 0 auto;
+}
+
+.logo-item {
+    width: 128px; /* Fixed width for logo container */
+    height: 128px; /* Fixed height for logo container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure logos don’t overflow */
+}
+
+.logo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintain aspect ratio while fitting within the container */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .logo-grid {
+        grid-template-columns: repeat(4, 128px); /* 4 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-grid {
+        grid-template-columns: repeat(3, 128px); /* 3 columns for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-grid {
+        grid-template-columns: repeat(2, 128px); /* 2 columns for very small screens */
+    }
+}
+
+@media (max-width: 320px) {
+    .logo-grid {
+        grid-template-columns: repeat(2, 128px); /* 2 columns for extremely small screens */
+    }
 }
