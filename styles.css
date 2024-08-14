@@ -309,6 +309,26 @@ body {
     color: #ffffff; /* White text for dark background */
 }
 
+.integration-logos {
+    display: flex;
+    flex-wrap: wrap; /* Allow logos to wrap to the next line */
+    justify-content: center; /* Center-align logos horizontally */
+    gap: 1rem; /* Space between logos */
+    margin-top: 2rem; /* Space above the logo grid */
+}
+
+.integration-logo {
+    flex: 1 1 150px; /* Flexible width with a minimum of 150px */
+    max-width: 150px; /* Limit maximum width of each logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.integration-logo img {
+    width: 100%; /* Make logo images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Fit image within the container */
+}
+
 .feature h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
