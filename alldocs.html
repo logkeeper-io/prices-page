@@ -1,120 +1,321 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Home - LogKeeper</title>
+	<title>Logkeeper | API Documentation</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+	<link rel="stylesheet" href="assets/css/head.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 </head>
+
 <body>
-<div class="container">
-    <div class="navbar">
-        <ul>
-            <li class="dropdown">
-                <a href="main.html">Home</a>
-            </li>
-            <li class="dropdown">
-                <a href="docs.html">Documentation</a>
-            </li>
-            <li class="dropdown">
-                <a href="price.html">Prices</a>
-            </li>
-            <li class="dropdown">
-                <a href="#">Product ></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Logs shipping</a></li>
-                    <li><a href="#">Metric collections</a></li>
-                    <li><a href="#">Visualisation</a></li>
-                    <li><a href="#">Robust analytics</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">About</a>
-            </li>
-            <li class="dropdown">
-                <a href="#">Resources ></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Guides</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Docs</a></li>
-                    <li><a href="#">Examples</a></li>
-                    <li><a href="#">Success Stories</a></li>
-                </ul>
-            </li>
-        </ul>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="brand">
+		<a href="index.html"><img src="" alt="Logkeeper Logo" class="img-responsive logo"></a>
+	</div>
+	<div class="container-fluid">
+		<div class="navbar-btn">
+			<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+		</div>
+	</div>
+</nav>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
 
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="main.html" class=""><i class="lnr lnr-home"></i> <span>Home</span></a></li>
+						<li>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Agent Installation</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages" class="collapse ">
+								<ul class="nav">
+									<li><a href="#k8s" class="">Kubernetes</a></li>
+									<li><a href="#" class="">ECS</a></li>
+									<li><a href="#" class="">Docker</a></li>
+									<li><a href="#subsubPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i><span>Linux</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
+										<div id="subsubPages" class="collapse ">
+											<ul class="nav">
+												<li><a href="#" class="">fluentd</a></li>
+												<li><a href="#" class="">promtail</a></li>
+												<li><a href="#" class="">fluentbit</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#subPages2" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Api Reference</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages2" class="collapse ">
+								<ul class="nav">
+									<li><a href="#" class="">Check Token &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#" class="">Get Users &nbsp; <span class="label label-primary">GET</span></a></li>
+									<li><a href="#" class="">Get Quota &nbsp; <span class="label label-warning">GET</span></a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#subPages3" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Integrations</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages3" class="collapse ">
+								<ul class="nav">
+									<li><a href="#awssubPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i><span>AWS</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
+										<div id="awssubPages" class="collapse ">
+											<ul class="nav">
+												<li><a href="#" class="">API Gateway</a></li>
+												<li><a href="#" class="">APP ELB</a></li>
+												<li><a href="#" class="">EC2</a></li>
+												<li><a href="#" class="">ECS Fargate</a></li>
+												<li><a href="#" class="">ECS</a></li>
+												<li><a href="#" class="">EKS</a></li>
+												<li><a href="#" class="">Guard Duty</a></li>
+												<li><a href="#" class="">Lambda</a></li>
+												<li><a href="#" class="">MQ</a></li>
+												<li><a href="#" class="">MSK</a></li>
+												<li><a href="#" class="">Network ELB</a></li>
+												<li><a href="#" class="">ECS</a></li>
+												<li><a href="#" class="">SageMaker</a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#azuresubPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i><span>Microsoft Azure</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
+										<div id="azuresubPages" class="collapse ">
+											<ul class="nav">
+												<li><a href="#" class="">Activity Logs</a></li>
+												<li><a href="#" class="">Blob Trigger</a></li>
+												<li><a href="#" class="">Diagnostic Logs</a></li>
+												<li><a href="#" class="">Graph API</a></li>
+												<li><a href="#" class="">NSG</a></li>
+												<li><a href="#" class="">VM</a></li>
+												<li><a href="#" class="">AKS</a></li>
+												<li><a href="#" class="">Functions</a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#gcpsubPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i><span>GCP</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
+										<div id="gcpsubPages" class="collapse ">
+											<ul class="nav">
+												<li><a href="#" class="">AI Platform</a></li>
+												<li><a href="#" class="">API Gateway</a></li>
+												<li><a href="#" class="">Apigee</a></li>
+												<li><a href="#" class="">App Engine</a></li>
+												<li><a href="#" class="">BigQuerry</a></li>
+												<li><a href="#" class="">GKE</a></li>
+												<li><a href="#" class="">AKS</a></li>
+												<li><a href="#" class="">Cloud Functions</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#subPages4" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Architecture Design</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages4" class="collapse ">
+								<ul class="nav">
+									<li><a href="#" class="">Single Setup</a></li>
+									<li><a href="#" class="">Docker Setup</a></li>
+									<li><a href="#" class="">Kubernetes Setup</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#subPages5" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Code Integrations</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages5" class="collapse ">
+								<ul class="nav">
+									<li><a href="#" class="">GO</a></li>
+									<li><a href="#" class="">Java</a></li>
+									<li><a href="#" class="">Python</a></li>
+									<li><a href="#" class="">Node.js</a></li>
+									<li><a href="#" class="">Rust</a></li>
+									<li><a href="#" class="">Node.js</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<h3 class="page-title">Generate Token</h3>
+					<h4 class="page-title">The Generate Token endpoint is used to authenticate a user or system and return a JSON Web Token (JWT). This token can then be used to access protected resources in the API that require authentication. </h4>
+					<div class="row">
+						<div class="col-md-7">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Request</h3>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Position</th>
+												<th>#</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Authorization</td>
+												<td><code>string</code></td>
+												<td><code>Header</code></td>
+												<td><code>Required</code></td>
+												<td>The username or email address of the user. </td>
+											</tr>
+											<tr>
+												<td>username</td>
+												<td><code>string</code></td>
+												<td><code>Body</code></td>
+												<td><code>Required</code></td>
+												<td>The username or email address of the user.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 
-        <div class="navbar-buttons">
-            <button class="btn-signup">Sign Up</button>
-            <button class="btn-login">Log In</button>
-        </div>
-    </div>
-</div>
+							<!-- END TABLE HOVER -->
+						</div>
+						<div class="col-md-5">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Response</h3>
+								</div>
+								<div class="panel-body">
+								<pre>{
+    "status": true,
+    "result_code": 200,
+    "message": "Success!",
+    "values": {
+        "name": "Smith",
+        "email": "Smith@gmail.com",
+        "token": "somaiquahBohngeeshi9woogudofo3eu",
+        "account_status": "1"
+    }
+}</pre>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+				</div>
 
-<div class="sidebar">
-    <ul class="sidebar-menu">
-        <li class="menu-item">
-            Documentation
-            <ul class="submenu">
-                <li class="menu-item">
-                    Getting Started
-                    <ul class="submenu">
-                        <li class="submenu-item">Introduction</li>
-                        <li class="submenu-item">Installation</li>
-                        <li class="submenu-item">Setup</li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    Guides
-                    <ul class="submenu">
-                        <li class="submenu-item">Quick Start</li>
-                        <li class="submenu-item">Advanced Topics</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li class="menu-item">API Reference
-            <ul class="submenu">
-                <li class="menu-item">
-                    API v1
-                    <ul class="submenu">
-                        <li class="submenu-item">add</li>
-                        <li class="submenu-item">delete</li>
-                        <li class="submenu-item">update</li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    API v2.0
-                    <ul class="submenu">
-                        <li class="submenu-item">Add</li>
-                        <li class="submenu-item">Delete</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li class="menu-item">Best Practices</li>
-    </ul>
-</div>
+				<div class="container-fluid">
+					<h3 id="adduser" class="page-title">Add User</h3>
+					<h4 class="page-title"><code>aaaa</code>safsafsa. </h4>
+					<div class="row">
+						<div class="col-md-7">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Request</h3>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Position</th>
+											<th>#</th>
+											<th>Description</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>Authorization</td>
+											<td><code>string</code></td>
+											<td><code>Header</code></td>
+											<td><code>Required</code></td>
+											<td><Auth></Auth></td>
+										</tr>
+										<tr>
+											<td>username</td>
+											<td><code>string</code></td>
+											<td><code>Body</code></td>
+											<td><code>Required</code></td>
+											<td>Username </td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 
-<!-- Main Content Area -->
-<div class="main-content-docs">
-    <div class="header">
-        <h1>Welcome to LogKeeper Documentation</h1>
-        <p>Welcome to the official documentation for LogKeeper, your comprehensive SaaS logging solution.</p>
-        <p>Here, you will find all the resources you need to get started, integrate, and make the most of our powerful logging service.</p>
-    </div>
-
-    <!-- Main content based on selected sidebar item -->
-    <div class="content-area">
-        <!-- Content will be dynamically loaded here based on sidebar selection -->
-    </div>
-</div>
-
-<div class="footer">
-    <p>&copy; 2024 LogKeeper. All rights reserved.</p>
-</div>
-
-<!-- JavaScript for Submenu Toggle -->
-<script src="scripts.js"></script>
+							<!-- END TABLE HOVER -->
+						</div>
+						<div class="col-md-5">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Response</h3>
+								</div>
+								<div class="panel-body">
+								<pre>{
+    "status": true,
+    "result_code": 200,
+    "message": "Success!",
+    "values": {
+        "name": "Smith",
+        "email": "smith@gmail.com",
+        "token": "fo5vie3EeyahCe8Tugahgheira0ehahd",
+        "account_status": "1"
+    }
+}</pre>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN -->
+		<div class="clearfix"></div>
+		<div class="footer">
+			<p>&copy; 2024 LogKeeper. All rights reserved.</p>
+		</div>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script>
+	$(document).ready(function() {
+	  $('pre code').each(function(i, block) {
+		hljs.highlightBlock(block);
+	  });
+	});
+	</script>
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,137 @@
+.container {
+    width: 100%;
+    background-color: #ffffff; /* Ensure background matches the rest of the content */
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed; /* Fix container to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+
+}
+
+/* Container inner for centering content */
+.container-inner {
+    max-width: 1200px; /* Optional: Set max width for large screens */
+    margin: 0 auto;
+    padding: 0 2rem; /* Add padding for better spacing */
+    box-sizing: border-box;
+    text-align: center; /* Center-align text within container */
+}
+
+.navbar-l {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative; /* Allows positioning of the buttons */
+}
+
+.navbar-l ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navbar-l ul li {
+    position: relative;
+}
+
+.navbar-l  ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.navbar-l ul li a:hover {
+    color: #ff6347;
+}
+
+.navbar-l ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 200%;
+    min-width: 500px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.navbar-l ul li .dropdown-menu li a {
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar-l ul li .dropdown-menu li a:hover {
+    background-color: #f4f4f4;
+    color: #ff6347;
+}
+
+.navbar-l ul li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Buttons Container */
+.navbar-buttons {
+    position: absolute;
+    right: 2rem; /* Position the buttons on the right side */
+    top: 0; /* Align to the top of the navbar */
+    height: 100%; /* Make buttons take full height of the navbar */
+    display: flex;
+    align-items: center; /* Vertically center the buttons */
+    gap: 1rem; /* Space between buttons */
+}
+
+/* Button Styles */
+.navbar-buttons button {
+    width: 120px; /* Set a fixed width for the buttons */
+    height: 40px; /* Ensure consistent height */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    background-color: #ffffff; /* Dark blue background */
+    color: #011e3b; /* White text */
+    border: 2px solid #011e3b;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.navbar-buttons button:hover {
+    background-color: #011e3b; /* Slightly lighter blue on hover */
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    position: relative; /* Ensure it stays below the content */
+    margin-top: auto; /* Push footer to the bottom if needed */
+}
+
+
+.footer p {
+    margin: 0;
+    color: #666;
+}
+
+/* Form and Result Styling */
+.form-group {
+    margin-bottom: 20px;
+}
