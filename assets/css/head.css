@@ -1,57 +1,59 @@
 .container {
     width: 100%;
     background-color: #ffffff; /* Ensure background matches the rest of the content */
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #395273;
+    border-top: 1px solid #ffffff;
     position: fixed; /* Fix container to the top */
     top: 0;
     left: 0;
+    right: 0;
     z-index: 1000; /* Ensure it stays on top of other content */
-
+    display: flex;
+    align-items: center;
 }
 
-/* Container inner for centering content */
-.container-inner {
-    max-width: 1200px; /* Optional: Set max width for large screens */
-    margin: 0 auto;
-    padding: 0 2rem; /* Add padding for better spacing */
-    box-sizing: border-box;
-    text-align: center; /* Center-align text within container */
-}
-
-.navbar-l {
+.mbrand {
     background-color: #ffffff;
-    padding: 1rem 0;
-    border-bottom: 1px solid #e0e0e0;
-    position: relative; /* Allows positioning of the buttons */
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+    margin-left: 15px;
 }
 
-.navbar-l ul {
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 1;
+    border-bottom: 1px solid #ffffff;
+    position: relative; /* Allows positioning of the buttons */
+    flex-grow: 1;
+}
+
+.navbar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
-.navbar-l ul li {
+.navbar ul li {
     position: relative;
 }
 
-.navbar-l  ul li a {
+.navbar ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     transition: color 0.3s ease;
-    padding: 0.5rem 1rem;
     display: block;
 }
 
-.navbar-l ul li a:hover {
-    color: #ff6347;
+.navbar ul li a:hover {
+    color: #fa6407;
 }
 
-.navbar-l ul li .dropdown-menu {
+.navbar ul li .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
@@ -63,23 +65,23 @@
     list-style-type: none;
     width: 200%;
     min-width: 500px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #ffffff;
 }
 
-.navbar-l ul li .dropdown-menu li a {
+.navbar ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar ul li .dropdown-menu li a {
     padding: 0.5rem 1rem;
-    color: #333;
+    color: #000333;
     text-decoration: none;
     display: block;
 }
 
-.navbar-l ul li .dropdown-menu li a:hover {
+.navbar ul li .dropdown-menu li a:hover {
     background-color: #f4f4f4;
     color: #ff6347;
-}
-
-.navbar-l ul li:hover .dropdown-menu {
-    display: block;
 }
 
 /* Buttons Container */
@@ -114,24 +116,3 @@
     border: 2px solid #ffffff;
 }
 
-/* Footer Styling */
-.footer {
-    width: 100%;
-    background-color: #ffffff;
-    padding: 1rem 0;
-    text-align: center;
-    border-top: 1px solid #e0e0e0;
-    position: relative; /* Ensure it stays below the content */
-    margin-top: auto; /* Push footer to the bottom if needed */
-}
-
-
-.footer p {
-    margin: 0;
-    color: #666;
-}
-
-/* Form and Result Styling */
-.form-group {
-    margin-bottom: 20px;
-}

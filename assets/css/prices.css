@@ -1,0 +1,94 @@
+
+.main-content-plans {
+    width: 100%; /* Full width of the viewport */
+    padding: 2rem 0; /* Vertical padding for spacing */
+    max-width: 1400px; /* Set a maximum width for large screens */
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center; /* Center-align text horizontally */
+    box-sizing: border-box; /* Incl/* Include padding in width cal */
+}
+
+/* Pricing and Card Styling */
+.pricing {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center; /* Center-align cards */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    gap: 2rem;
+}
+
+.card, .calculator {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-align text in cards */
+    width: 100%;
+    max-width: 300px; /* Adjust max width as needed */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card.selected, .calculator.selected {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #000000;
+}
+
+.card:not(.selected), .calculator:not(.selected) {
+    background-color: #f0f0f0;
+    color: #999;
+    opacity: 0.8;
+    transform: scale(0.95);
+}
+
+.card h2, .calculator h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card .price, .calculator .price {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.card .price span, .calculator .price span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card ul, .calculator ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.card ul li, .calculator ul li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.card button, .calculator button {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 15px; /* More rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover, .calculator button:hover {
+    background-color: #000000;
+}
+
+/* Retention Selector */
+.retention-selector {
+    margin-top: 1rem;
+}
+
+.retention-selector label {
+    margin-right: 0.5rem;
+}
