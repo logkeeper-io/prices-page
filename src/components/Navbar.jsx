@@ -73,7 +73,7 @@ export const Navbar = () => {
               onClick={() => setIsModalOpen(true)}
             >
               {/*<GithubIcon />*/}
-              <span className="pt-px">Sign in1</span>
+              <span className="pt-px">Sign in</span>
             </a>
           </div>
 

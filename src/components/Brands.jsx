@@ -7,6 +7,7 @@ import { NetflixLogo } from "../assets/logos/NetflixLogo";
 import { SlackLogo } from "../assets/logos/SlackLogo";
 import { SpotifyLogo } from "../assets/logos/SpotifyLogo";
 import { StripeLogo } from "../assets/logos/StripeLogo";
+import { TailcastLogo } from "../assets/logos/TailcastLogo.jsx";
 
 export const Brands = () => (
   <section className="py-12 sm:py-24 bg-bgDark1 w-full  lg:mt-16 mb-8 lg:mb-16">
@@ -49,6 +50,9 @@ export const Brands = () => (
               </div>
               <div className="w-1/2 sm:w-1/3  py-6 flex  justify-center">
                 <SlackLogo />
+              </div>
+              <div className="w-1/2 sm:w-1/3  py-6 flex  justify-center">
+              <TailcastLogo />
               </div>
             </div>
           </div>
