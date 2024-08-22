@@ -1,0 +1,26 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Swagger Petstore"
+  },
+  "host": "petstore.swagger.io",
+  "basePath": "/v1",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/pets": {
+      "get": {
+        "summary": "List all pets",
+        "operationId": "listPets",
+        "tags": ["pets"],
+        "responses": {
+          "200": {
+            "description": "An paged array of pets"
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,11 +13,11 @@ const footerData = [
     items: [
       {"name": "Organization Team", "ref": "home"},
       {"name": "Our Journeys", "ref": "home"},
-      {"name": "Pricing Plans", "ref": "pricing"},
+      {"name": "Pricing Plans", "ref": "#pricing"},
       {"name": "Roadmap", "ref": "home"},
       {"name": "Terms & Conditions",  "ref": "home"},
       {"name": "Privacy Policy", "ref": "home"},
-      {"name": "Documentation", "ref": "docs"}
+      {"name": "Documentation", "ref": "api-docs.html"}
     ],
   },
   {
@@ -94,7 +94,7 @@ export const Footer = () => {
                     <li key={`${item.name}-${index}`} className="mb-4">
                       <a
                         className="text-gray-400 hover:text-gray-300"
-                        href={`#${item.ref}`}
+                        href={`${item.ref}`}
                         aria-label={item.name}
                       >
                         {item.name}
