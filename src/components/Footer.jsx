@@ -6,17 +6,22 @@ import { TwitterIcon } from "../assets/icons/TwitterIcon";
 const footerData = [
   {
     title: "Products",
-    items: ["Services", "About Us", "News and Stories", "Roadmap"],
+    items: [
+      {"name": "Services", "ref": "#home"},
+      {"name": "About Us", "ref": "aboutus.html"},
+     // {"name": "News and Stories", "ref": "#home"},
+     // {"name": "Roadmap", "ref": "#home"},
+    ],
   },
   {
     title: "Important Links",
     items: [
-      {"name": "Organization Team", "ref": "home"},
-      {"name": "Our Journeys", "ref": "home"},
+     // {"name": "Organization Team", "ref": "#home"},
+      {"name": "Our Journeys", "ref": "#home"},
       {"name": "Pricing Plans", "ref": "#pricing"},
-      {"name": "Roadmap", "ref": "home"},
-      {"name": "Terms & Conditions",  "ref": "home"},
-      {"name": "Privacy Policy", "ref": "home"},
+      {"name": "Roadmap", "ref": "#home"},
+      {"name": "Terms & Conditions",  "ref": "#home"},
+      {"name": "Privacy Policy", "ref": "#home"},
       {"name": "Documentation", "ref": "api-docs.html"}
     ],
   },
@@ -73,15 +78,15 @@ export const Footer = () => {
                 <h3 className="mb-6 text-2xl font-bold text-primaryText">Products</h3>
                 <ul>
                   {footerData[0].items.map((item, index) => (
-                    <li key={`${item}-${index}`} className="mb-4">
-                      <a
-                        className="text-gray-400 hover:text-gray-300"
-                        href="#"
-                        aria-label={item}
-                      >
-                        {item}
-                      </a>
-                    </li>
+                      <li key={`${item.name}-${index}`} className="mb-4">
+                        <a
+                            className="text-gray-400 hover:text-gray-300"
+                            href={`${item.ref}`}
+                            aria-label={item.name}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
                   ))}
                 </ul>
               </div>
