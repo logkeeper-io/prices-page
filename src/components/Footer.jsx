@@ -2,13 +2,14 @@ import { FacebookIcon } from "../assets/icons/FacebookIcon";
 import { InstagramIcon } from "../assets/icons/InstagramIcon";
 import { LogkeeperLogo } from "../assets/logos/LogkeeperLogo";
 import { TwitterIcon } from "../assets/icons/TwitterIcon";
+export const base = import.meta.env.BASE_URL;
 
 const footerData = [
   {
     title: "Products",
     items: [
-      {"name": "Services", "ref": "#home"},
-      {"name": "About Us", "ref": "aboutus.html"},
+      {"name": "Services", "ref": `${base}/#home`},
+      {"name": "About Us", "ref": `${base}/aboutus.html`},
      // {"name": "News and Stories", "ref": "#home"},
      // {"name": "Roadmap", "ref": "#home"},
     ],
@@ -17,12 +18,12 @@ const footerData = [
     title: "Important Links",
     items: [
      // {"name": "Organization Team", "ref": "#home"},
-      {"name": "Our Journeys", "ref": "#home"},
-      {"name": "Pricing Plans", "ref": "#pricing"},
-      {"name": "Roadmap", "ref": "#home"},
-      {"name": "Terms & Conditions",  "ref": "#home"},
-      {"name": "Privacy Policy", "ref": "#home"},
-      {"name": "Documentation", "ref": "api-docs.html"}
+      {"name": "Our Journeys", "ref": `${base}/#home`},
+      {"name": "Pricing Plans", "ref": `${base}/#pricing`},
+      {"name": "Roadmap", "ref": `${base}/#home`},
+      {"name": "Terms & Conditions",  "ref": `${base}/#home`},
+      {"name": "Privacy Policy", "ref": `${base}/#home`},
+      {"name": "Documentation", "ref": `${base}/api-docs.html`}
     ],
   },
   {
@@ -52,21 +53,21 @@ export const Footer = () => {
               <div className="w-36 mx-auto lg:mx-0">
                 <a
                   className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] outlined-button"
-                  href="#"
+                  href={`${base}/#`}
                   aria-label="Facebook"
                 >
                   <FacebookIcon />
                 </a>
                 <a
                   className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
-                  href="#"
+                  href={`${base}/#`}
                   aria-label="Twitter"
                 >
                   <TwitterIcon />
                 </a>
                 <a
                   className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
-                  href="#"
+                  href={`${base}/#`}
                   aria-label="Instagram"
                 >
                   <InstagramIcon />
@@ -115,7 +116,7 @@ export const Footer = () => {
                     <li key={`${item}-${index}`} className="mb-4">
                       <a
                         className="text-gray-400 hover:text-gray-300"
-                        href="#"
+                        href={`${base}/#`}
                         aria-label={item}
                       >
                         {item}

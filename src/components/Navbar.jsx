@@ -4,13 +4,14 @@ import { SigninModal } from "./SigninModal";
 
 import { LogkeeperLogo } from "../assets/logos/LogkeeperLogo.jsx";
 import { GithubIcon } from "../assets/icons/GithubIcon";
+export const base = import.meta.env.BASE_URL;
 
 const navbarLinks = [
-  { label: "Home", href: "/#home", ariaLabel: "Home" },
-  { label: "Features", href: "/#features", ariaLabel: "Features" },
-  { label: "Pricing", href: "/#pricing", ariaLabel: "Pricing" },
-  { label: "Feedback", href: "/#feedback", ariaLabel: "Feedback" },
-  { label: "FAQ", href: "/#FAQ", ariaLabel: "FAQ" },
+  { label: "Home", href: `${base}/#home`, ariaLabel: "Home" },
+  { label: "Features", href: `${base}/#features`, ariaLabel: "Features" },
+  { label: "Pricing", href: `${base}/#pricing`, ariaLabel: "Pricing" },
+  { label: "Feedback", href: `${base}/#feedback`, ariaLabel: "Feedback" },
+  { label: "FAQ", href: `${base}/#FAQ`, ariaLabel: "FAQ" },
 ];
 
 export const Navbar = () => {
@@ -30,7 +31,7 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <a href="/#home" aria-label="Home">
+          <a href={`${base}/#home`} aria-label="Home">
             <div className="flex justify-start items-center grow basis-0">
               {/*<div className="text-white mr-2 text-6xl">*/}
                 <LogkeeperLogo />
