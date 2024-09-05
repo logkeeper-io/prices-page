@@ -18,6 +18,11 @@ import { RedisLogo } from "../assets/logos/RedisLogo";
 import { AKSLogo } from "../assets/logos/AKSLogo";
 import { GKELogo } from "../assets/logos/GKELogo";
 import { ECSLogo } from "../assets/logos/ECSLogo";
+import { MagentoLogo } from "../assets/logos/MagentoLogo";
+import { PrometheusLogo } from "../assets/logos/PrometheusLogo";
+import { GrafanaLogo } from "../assets/logos/GrafanaLogo";
+import { LogstashLogo } from "../assets/logos/LogstashLogo";
+import { GithubLogo } from "../assets/logos/GithubLogo";
 
 const logos = [
   <AWSLogo key="AWS" />,
@@ -39,11 +44,11 @@ const logos = [
   <AKSLogo key="AKS" />,
   <GKELogo key="GKE" />,
   <ECSLogo key="ECS" />,
-  // <CassandraLogo key="Cassandra" />,
-  // <NginxLogo key="Nginx" />,
-  // <MysqlLogo key="Mysql" />,
-  // <PgsqlLogo key="Pgsql" />,
-  // <MongoDbLogo key="MongoDb" />,
+  <MagentoLogo key="Magento" />,
+  <PrometheusLogo key="Prometheus" />,
+  <GrafanaLogo key="Grafana" />,
+  <LogstashLogo key="Lostash" />,
+  <GithubLogo key="Github" />,
   // <RabbitMqLogo key="RabbitMq" />
 ];
 
