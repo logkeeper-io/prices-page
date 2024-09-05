@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { InvitationModal } from "./InvitationModal";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
+import { SigninModal } from "./SigninModal";
 
 const pricingData = [
   "Seamless integration",
@@ -58,6 +59,7 @@ const pricingDataEnterprise = [
 export const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSigninModalOpen, setIsModalSigninOpen] = useState(false);
 
   const handleChange = () => {
     setIsMonthly(!isMonthly);
@@ -129,7 +131,7 @@ export const Pricing = () => {
                   </ul>
                   <button
                     className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
-                    onClick={() => setIsModalOpen(true)}
+                    onClick={() => setIsModalSigninOpen(true)}
                     aria-label="Get started"
                   >
                     Get Started
@@ -208,6 +210,9 @@ export const Pricing = () => {
       </div>
       {isModalOpen && (
         <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
+      )}
+      {isSigninModalOpen && (
+          <SigninModal isOpen={isModalOpen} setIsOpen={setIsModalSigninOpen} />
       )}
     </section>
   );

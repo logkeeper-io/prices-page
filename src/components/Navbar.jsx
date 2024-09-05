@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SigninModal } from "./SigninModal";
 
 import { LogkeeperLogo } from "../assets/logos/LogkeeperLogo.jsx";
 import { GithubIcon } from "../assets/icons/GithubIcon";
@@ -14,8 +15,10 @@ const navbarLinks = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSigninModalOpen, setIsModalSigninOpen] = useState(false);
 
   return (
+      <>
     <nav
       className="w-full h-20 flex flex-col justify-center items-center fixed bg-bgDark1 lg:bg-bgDarkTransparent z-40 lg:backdrop-blur-xl"
       aria-label="Main navigation"
@@ -64,17 +67,25 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
         >
           <div className="grow basis-0 justify-end hidden lg:flex">
-            <a
-              className="text-white main-border-gray rounded-xl
-           bg-bgDark2 hover:bg-bgDark3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
-             href="https://logkeeper.io"
-              target="_blank"
-              aria-label="source code"
-              onClick={() => setIsModalOpen(true)}
+           {/* <a*/}
+           {/*   className="text-white main-border-gray rounded-xl*/}
+           {/*bg-bgDark2 hover:bg-bgDark3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"*/}
+           {/*  href="https://logkeeper.io"*/}
+           {/*   target="_blank"*/}
+           {/*   aria-label="source code"*/}
+           {/*   onClick={() => setIsModalOpen(true)}*/}
+           {/* >*/}
+           {/*   /!*<GithubIcon />*!/*/}
+           {/*   <span className="pt-px">Sign in</span>*/}
+           {/*   */}
+           {/* </a>*/}
+            <button
+                className="w-[110px] h-8 contained-button mr-1 "
+                onClick={() => setIsModalSigninOpen(true)}
+                aria-label="Sign In"
             >
-              {/*<GithubIcon />*/}
-              <span className="pt-px">Sign in</span>
-            </a>
+              Sign In
+            </button>
           </div>
 
 
@@ -126,6 +137,12 @@ export const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
     </nav>
+  {isSigninModalOpen && (
+      <SigninModal isOpen={isSigninModalOpen} setIsOpen={setIsModalSigninOpen} />
+  )}
+  </>
+
   );
 };

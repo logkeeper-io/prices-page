@@ -23,10 +23,13 @@ export const InvitationModal = ({ setIsOpen }) => (
           <div className="flex relative">
             <div className="w-1/2 hidden lg:inline">
               <h2 className="mt-6 mb-2 text-5xl font-bold tracking-normal text-primaryText">
-                Subscribe Now
+                We're not live yet.
+                {/*Subscribe Now*/}
+
               </h2>
               <h2 className="text-5xl font-bold tracking-normal text-secondaryColor">
-                Stay Ahead of the Log Storm!
+                {/*Stay Ahead of the Log Storm!*/}
+                Sign-in will be available once we launch soon!
               </h2>
 
               <ul className="mb-6 text-primaryText mt-12">
@@ -64,6 +67,7 @@ export const InvitationModal = ({ setIsOpen }) => (
                     id="newsletterInput3-1"
                     type="text"
                     placeholder="Your email address"
+                    disabled
                   />
                 </div>
                 <div className="w-full sm:w-4/5 p-2 mt-4 mx-auto">
@@ -71,6 +75,7 @@ export const InvitationModal = ({ setIsOpen }) => (
                     className="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-primaryColor hover:bg-[#7274f3] transition ease-in-out duration-200"
                     type="button"
                     aria-label="Join now"
+                    disabled
                   >
                     Join Now
                   </button>
