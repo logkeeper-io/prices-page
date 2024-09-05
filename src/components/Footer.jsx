@@ -9,7 +9,7 @@ const footerData = [
     title: "Products",
     items: [
       {"name": "Services", "ref": `${base}/#home`},
-      {"name": "About Us", "ref": `${base}/aboutus.html`},
+      {"name": "About Us", "ref": `${base}/aboutus`},
      // {"name": "News and Stories", "ref": "#home"},
      // {"name": "Roadmap", "ref": "#home"},
     ],
@@ -23,7 +23,7 @@ const footerData = [
       {"name": "Roadmap", "ref": `${base}/#home`},
       {"name": "Terms & Conditions",  "ref": `${base}/#home`},
       {"name": "Privacy Policy", "ref": `${base}/#home`},
-      {"name": "Documentation", "ref": `${base}/api-docs.html`}
+      {"name": "Documentation", "ref": `${base}/api-docs`}
     ],
   },
   {
