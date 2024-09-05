@@ -1,7 +1,7 @@
 export const DropboxLogo = () => (
   <svg
     width="160"
-    height="32"
+    height="64"
     viewBox="0 0 160 32"
     xmlns="http://www.w3.org/2000/svg"
     className="fill-[rgb(174,178,183)]"

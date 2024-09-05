@@ -2,11 +2,20 @@ import { motion } from "framer-motion";
 
 import { HttpdLogo } from "../assets/logos/HttpdLogo";
 import { AmazonLogo } from "../assets/logos/AmazonLogo";
+import { AWSLogo } from "../assets/logos/AWSLogo";
 import { DropboxLogo } from "../assets/logos/DropboxLogo";
 import { NetflixLogo } from "../assets/logos/NetflixLogo";
 import { SlackLogo } from "../assets/logos/SlackLogo";
 import { SpotifyLogo } from "../assets/logos/SpotifyLogo";
 import { StripeLogo } from "../assets/logos/StripeLogo";
+import { AzureLogo } from "../assets/logos/AzureLogo";
+import { GCPLogo } from "../assets/logos/GCPLogo";
+import { CassandraLogo } from "../assets/logos/CassandraLogo";
+import { NginxLogo } from "../assets/logos/NginxLogo";
+import { MysqlLogo } from "../assets/logos/MysqlLogo";
+import { PgsqlLogo } from "../assets/logos/PgsqlLogo";
+import { MongoDbLogo } from "../assets/logos/MongoDbLogo";
+import { RabbitMqLogo } from "../assets/logos/RabbitMqLogo";
 
 export const Brands = () => (
   <section className="py-12 sm:py-24 bg-bgDark1 w-full  lg:mt-16 mb-8 lg:mb-16">
@@ -32,23 +41,32 @@ export const Brands = () => (
             <div className="flex flex-wrap -m-4">
 
               <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
-                <AmazonLogo />
-              </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex  justify-center">
-                <DropboxLogo />
-              </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex  justify-center">
-                <NetflixLogo />
+                <AWSLogo />
               </div>
               <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
-                <StripeLogo />
+                <AzureLogo />
+              </div>
+              <div className="w-1/2 sm:w-1/3 py-6 flex  justify-center">
+                <GCPLogo />
+              </div>
+              <div className="w-1/2 sm:w-1/3 py-6 flex  justify-center">
+                <CassandraLogo />
+              </div>
+              <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
+                <NginxLogo />
               </div>
 
               <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
-                <SpotifyLogo />
+                <MysqlLogo />
               </div>
               <div className="w-1/2 sm:w-1/3  py-6 flex  justify-center">
-                <SlackLogo />
+                <PgsqlLogo />
+              </div>
+              <div className="w-1/2 sm:w-1/3  py-6 flex  justify-center">
+                <MongoDbLogo />
+              </div>
+              <div className="w-1/2 sm:w-1/3  py-6 flex  justify-center">
+                <RabbitMqLogo />
               </div>
             </div>
           </div>
