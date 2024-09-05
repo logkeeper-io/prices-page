@@ -3,6 +3,6 @@ import react from '@astrojs/react';
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  integrations: [react(), tailwind()]
-  site: 'https://logkeeper-io.github.io',
+  integrations: [react(), tailwind()],
+  site: 'https://logkeeper-io.github.io'
 });
