@@ -39,5 +39,40 @@ const { title } = Astro.props;
         scroll-behavior: smooth !important;
       }
     </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('emailForm');
+        if (form) {
+          form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form values
+            const name = document.querySelector('input[name="name"]').value;
+            const comment = document.querySelector('input[name="comment"]').value;
+            const email = document.querySelector('input[name="mail"]').value;
+
+            // Validate email input (basic check)
+            if (!email || !email.includes('@')) {
+              alert('Please enter a valid email address.');
+              return;
+            }
+
+            // Construct the email parameters
+            const subject = encodeURIComponent('Contact Form Submission');
+            const body = encodeURIComponent(`Name: ${name}\nComment: ${comment}\nEmail: ${email}`);
+
+            // Construct the mailto link
+            const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+
+            // Open the default email client
+            window.location.href = mailtoLink;
+          });
+        } else {
+          console.error('Form with id "emailForm" not found.');
+        }
+      });
+    </script>
+
+
   </body>
 </html>
