@@ -8,9 +8,9 @@ const FAQData = [
       "Yes, you can easily upgrade or downgrade your plan at any time. Simply navigate to the account settings in your dashboard and choose the desired plan. The changes will be reflected immediately, and any adjustments in pricing will be applied on your next billing cycle. Our support team is more than happy to provide guidance and recommendations.",
   },
   {
-    question: "How to claim your 25% discount offer?",
+    question: "How can I use the LogKeeper system to monitor and analyze logs in real-time?",
     answer:
-      "To claim your 25% discount, simply sign up for an account and enter the promotional code at checkout. The discount will be applied automatically to your purchase.",
+      "Our log managing SaaS system allows you to monitor and analyze logs in real-time effortlessly. After setting up log integration from your desired sources (servers, apps, or services), the system continuously collects and aggregates log data. You can access this data via a user-friendly dashboard that features powerful filtering, search, and alerting capabilities.",
   },
   {
     question: "What's your refund policy?",
@@ -21,6 +21,14 @@ const FAQData = [
     question: "How to get support for the product?",
     answer:
       "Our dedicated support team is here to help. You can reach out to us through the contact form on our website, send an email, or engage with us via live chat. We'll be happy to assist you with any questions or concerns you may have",
+  },
+  {
+    question: "What types of logs can the system collect and manage?",
+    answer:"The system collects application, server, cloud, container, security, and custom logs, supporting a wide range of sources across your infrastructure.",
+  },
+  {
+    question: "How does the alerting system work?",
+    answer:"Set custom alert rules for specific events, assign alerts to teams, and receive notifications via email, Email, Slack, or integrations like PagerDuty, with severity levels for urgency.",
   },
 ];
 
