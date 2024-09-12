@@ -76,7 +76,7 @@ export const SigninModal = ({ setIsOpen }) => (
                                 {/*    />*/}
                                 {/*</div>*/}
                                 <div className="w-full sm:w-4/5 p-2 mt-4 mx-auto">
-                                    <form action="mailto:manager@logkeeper.io?subject=Request%20to%20Sign%20Up%20for%20Logkeeper%20Services" method="POST" encType="text/plain">
+                                    <form action="mailto:manager@logkeeper.io?subject=Request%20to%20Sign%20Up%20for%20Logkeeper%20Services" method="POST" encType="text/plain" target="_top">
                                     <button
                                         className="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-primaryColor hover:bg-[#7274f3] transition ease-in-out duration-200"
                                         type="submit"
