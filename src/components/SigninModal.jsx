@@ -57,26 +57,19 @@ export const SigninModal = ({ setIsOpen }) => (
                             <h3 className="mb-7 text-2xl text-primaryText font-bold leading-snug text-center">
                                 Join a New Wave of Innovators in Log Management
                             </h3>
+                            <form action="mailto:info@logkeeper.io" method="post" encType="text/plain">
                             <div className="flex flex-wrap -m-2">
                                 <div className="w-full sm:w-4/5 p-2 mx-auto">
                                     <input
                                         className="px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
                                         id="newsletterInput3-1"
                                         type="text"
+                                        name="mail"
                                         placeholder="Your email address"
                                     />
                                 </div>
-                                {/*<div className="w-full sm:w-4/5 p-2 mx-auto">*/}
-                                {/*    <input*/}
-                                {/*        className="px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"*/}
-                                {/*        id="newsletterInput3-1"*/}
-                                {/*        type="text"*/}
-                                {/*        placeholder="Join now"*/}
-                                {/*        disabled*/}
-                                {/*    />*/}
-                                {/*</div>*/}
+
                                 <div className="w-full sm:w-4/5 p-2 mt-4 mx-auto">
-                                    <form action="mailto:manager@logkeeper.io?subject=Request%20to%20Sign%20Up%20for%20Logkeeper%20Services" method="POST" encType="text/plain" target="_top">
                                     <button
                                         className="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-primaryColor hover:bg-[#7274f3] transition ease-in-out duration-200"
                                         type="submit"
@@ -84,9 +77,10 @@ export const SigninModal = ({ setIsOpen }) => (
                                     >
                                         Join Now
                                     </button>
-                                    </form>
                                 </div>
+
                             </div>
+                            </form>
                         </div>
                         <div
                             className="fixed top-6 right-6 z-50 w-5 h-5 cursor-pointer text-[rgb(255,255,255,0.7)] hover:text-white transition"
