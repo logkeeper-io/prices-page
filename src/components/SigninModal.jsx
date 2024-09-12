@@ -24,9 +24,9 @@ export const SigninModal = ({ setIsOpen }) => {
                 }
 
                 // Create a mailto link
-                const subject = encodeURIComponent('Contact Form Submission');
+                const subject = encodeURIComponent('Subscription Request: LogKeeper Early Access');
                 const body = encodeURIComponent(`Name: ${name}\nComment: ${comment}\nEmail: ${email}`);
-                const mailtoLink = `mailto:example@example.com?subject=${subject}&body=${body}`;
+                const mailtoLink = `mailto:info@logkeeper.io?subject=${subject}&body=${body}`;
 
                 // Redirect to mailto link
                 window.location.href = mailtoLink;
