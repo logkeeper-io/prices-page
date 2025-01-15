@@ -7,25 +7,11 @@ import testimonial3 from "../assets/images/testimonial3.png";
 
 const testimonialsData = [
   {
-    customerName: "Javier Moreno",
-    customerTitle: "Chief Data Analyst of TechVanguard Solutions",
+    customerName: "Volodymyr Siranchuk",
+    customerTitle: "Solana Validator Operator",
     content:
       "The advanced log analysis tools have truly transformed our operations and enabled us to make informed decisions that enhance our productivity. LogKeeper has been instrumental in this shift. Its user-friendly interface and the valuable insights it provides have led to substantial improvements in our efficiency and effectiveness.",
     image: testimonial1,
-  },
-  {
-    customerName: "Alexandra Hartman",
-    customerTitle: "Senior Product Manager of InnoWave Technologies",
-    content:
-      "LogKeeper has truly revolutionized our data management approach. Its innovative features and user-centric design have made it incredibly easy to navigate and extract valuable insights. Since integrating LogKeeper, we've seen a dramatic boost in our operational efficiency, allowing us to tackle challenges more proactively and drive our business forward with confidence.",
-    image: testimonial2,
-  },
-  {
-    customerName: "Ethan Brooks",
-    customerTitle: "Lead Systems Architect in NexaTech Innovations",
-    content:
-      "Discovering LogKeeper has been a game changer for our team. The platform's advanced analytics and intuitive design have streamlined our data processing like never before. We've been able to quickly pinpoint issues and optimize our strategies, leading to significant improvements in both productivity and decision-making.",
-    image: testimonial3,
   },
 ];
 
