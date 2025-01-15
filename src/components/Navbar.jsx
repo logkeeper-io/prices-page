@@ -4,8 +4,8 @@ import { SigninModal } from "./SigninModal";
 
 import { LogkeeperLogo } from "../assets/logos/LogkeeperLogo.jsx";
 import { GithubIcon } from "../assets/icons/GithubIcon";
-export const base = import.meta.env.BASE_URL;
-
+// export const base = import.meta.env.BASE_URL;
+export const base = "";
 const navbarLinks = [
   { label: "Home", href: `${base}/#home`, ariaLabel: "Home" },
   { label: "Features", href: `${base}/#features`, ariaLabel: "Features" },
