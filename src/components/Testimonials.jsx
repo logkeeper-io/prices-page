@@ -8,7 +8,7 @@ import testimonial3 from "../assets/images/testimonial3.png";
 const testimonialsData = [
   {
     customerName: "Volodymyr Siranchuk",
-    customerTitle: "Solana Validator Operator",
+    customerTitle: "Datagroup Lead Engineer",
     content:
       "The advanced log analysis tools have truly transformed our operations and enabled us to make informed decisions that enhance our productivity. LogKeeper has been instrumental in this shift. Its user-friendly interface and the valuable insights it provides have led to substantial improvements in our efficiency and effectiveness.",
     image: testimonial1,
