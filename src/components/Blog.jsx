@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import blog1 from "../assets/images/blog1.png";
 import blog2 from "../assets/images/blog2.png";
 import blog3 from "../assets/images/blog3.png";
-export const base = import.meta.env.BASE_URL;
+// export const base = import.meta.env.BASE_URL;
+export const base = "";
 
 const blogData = [
   {

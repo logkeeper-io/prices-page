@@ -2,7 +2,8 @@ import { FacebookIcon } from "../assets/icons/FacebookIcon";
 import { InstagramIcon } from "../assets/icons/InstagramIcon";
 import { LogkeeperLogo } from "../assets/logos/LogkeeperLogo";
 import { TwitterIcon } from "../assets/icons/TwitterIcon";
-export const base = import.meta.env.BASE_URL;
+// export const base = import.meta.env.BASE_URL;
+export const base = "";
 
 const footerData = [
   {
